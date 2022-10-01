@@ -1,17 +1,24 @@
 
 
-const FeedbackOptions = (onGood, onNeutral, onBad) => {
-    return (<ul>
-                    <li>
-                        <button type="button" onClick={onGood}>Good</button>
-                    </li>
-                    <li>
-                        <button type="button" onClick={onNeutral}>Neutral</button>
-                    </li>
-                    <li>
-                        <button type="button" onClick={onBad}>Bad</button>
-                    </li>
-                </ul>)
+const FeedbackOptions = ({options, onLeaveFeedback}) => {
+    return (
+        <ul>
+            {options.map((option, idx) => {
+                return <li key={idx}>
+                
+            
+                    <button 
+              type="button"
+              onClick={() => onLeaveFeedback()}
+            >
+              {option}
+            </button>
+                
+                </li>
+                
+            })}
+        </ul>
+    )
     
 }
 
