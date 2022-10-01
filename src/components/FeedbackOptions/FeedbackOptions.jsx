@@ -1,7 +1,7 @@
 
 
-const FeedbackOptions =(onGood, onNeutral, onBad)=>{
-    <ul>
+const FeedbackOptions = (onGood, onNeutral, onBad) => {
+    return (<ul>
                     <li>
                         <button type="button" onClick={onGood}>Good</button>
                     </li>
@@ -11,7 +11,8 @@ const FeedbackOptions =(onGood, onNeutral, onBad)=>{
                     <li>
                         <button type="button" onClick={onBad}>Bad</button>
                     </li>
-                </ul>
+                </ul>)
+    
 }
 
 export default FeedbackOptions;
