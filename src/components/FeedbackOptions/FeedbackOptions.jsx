@@ -9,7 +9,7 @@ const FeedbackOptions = ({options, onLeaveFeedback}) => {
             
                     <button 
               type="button"
-              onClick={() => onLeaveFeedback()}
+              onClick={() => onLeaveFeedback(option.toLowerCase())}
             >
               {option}
             </button>
