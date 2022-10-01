@@ -1,5 +1,5 @@
 import React from "react";
-// import FeedbackOptions from './feedback'
+import Notification from '../Notificasion/Notificasion'
 
 class Statistics extends React.Component{
 
@@ -57,8 +57,8 @@ state = {
                         <button type="button" onClick={this.buttonIncrementBad}>Bad</button>
                     </li>
                 </ul>
-                <p>Statistics</p>
-                <ul>
+                 <p>Statistics</p>
+                 {this.countTotalFeedback() ?  <ul>
                     <li>
                         <span>Good: {this.state.good}</span>
                     </li>
@@ -74,7 +74,10 @@ state = {
                      <li>
                         <span>Positive feedback: {this.countPositiveFeedbackPercentage()}%</span>
                     </li>
-                </ul>
+                </ul> : (
+            <Notification message="There is no feedback" />
+          )}
+               
                 
                 
             </div>
@@ -83,3 +86,5 @@ state = {
 }
 
 export default Statistics;
+
+

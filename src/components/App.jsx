@@ -1,5 +1,5 @@
 
-import Statistics from './feedback/feedback'
+import Statistics from './Statistics/Statistics'
 
 
 export const App = () => {
