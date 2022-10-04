@@ -3,6 +3,10 @@ import { Component } from 'react';
 import Notification from './Notificasion/Notificasion';
 import Statistics from './Statistics/Statistics'
 import FeedbackOptions from '../components/FeedbackOptions/FeedbackOptions'
+import { Title } from './Title/Title';
+import {StatTitle} from './StatisticsTitle/StatisticsTitle'
+
+
 
 export class App extends Component {
   state = {
@@ -33,12 +37,12 @@ export class App extends Component {
       
          return (
             <div>
-                 <h1>Please leave feedback</h1>
+                 <Title title='Please leave feedback' />
 
                  <FeedbackOptions options={['Good', 'Neutral', 'Bad']}
                       onLeaveFeedback={this.onLeaveFeedback} />
-             
-                 <p>Statistics</p>
+                <StatTitle title='Statistics' />
+                
                  {this.countTotalFeedback() ? (
             <Statistics
               good={this.state.good}
